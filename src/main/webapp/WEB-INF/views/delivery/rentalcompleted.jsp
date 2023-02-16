@@ -541,7 +541,7 @@ span, #logoImg:hover {
 			location.href = "/delivery/selectBookbagListById";
 		})
 		$("#bookshelves").on("click", function() {
-			location.href = "/bookshelves/selectAllBookshelves";
+			location.href = "/bookshelves/selectBookshelvesListById";
 		})
 		 $("#mypage").on("click", function() {
 	         if (${loginID == null}) {
