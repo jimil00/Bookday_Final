@@ -30,10 +30,9 @@
 	font-family: 'NanumSquareNeo-Variable';
 }
 
-div {
-	/* border: 1px solid black; */
-	
-}
+/* div {
+	border: 1px solid black;
+} */
 
 .container {
 	margin: auto;
@@ -80,27 +79,29 @@ div {
 				<img src="/resources/bookday_logo_ver1(kor).png" id="logo-img">
 			</div>
 			<div class="title">30일 구독권이 결제 완료되었습니다!</div>
-			<div class="sub-date">구독기간 : ${dto.formedStartDate } ~
-				${dto.formedEndDate }</div>
+			<div class="sub-date">구독기간 : ${dto.formedStartDate } ~ ${dto.formedEndDate }</div>
 			<div class="btn-div">
-				<button class="btn" id="bookbag" style="width: 120px;">책가방으로
-					이동</button>
+				<button class="btn" id="bookbag" style="width: 120px;">책가방으로 이동</button>
 				<button class="btn" id="close" style="width: 70px;">닫기</button>
 			</div>
 		</div>
 	</div>
 	<script>
+		// 팝업창 x 버튼 눌렀을 때 이벤트
+		// window.onunload  : 사용자가 페이지를 떠날 때, 즉 문서를 완전히 닫을 때
+		window.onunload = function() {
+			opener.parent.location.reload();
+		} 
+	
 		$("#bookbag").on("click", function() {
+			window.onunload = null; // window.onunload 기능 방지
 			opener.location.href = "/delivery/selectBookbagListById";
 			window.close();
 		})
+		
 		$("#close").on("click", function() {
-			opener.parent.location.reload();
 			window.close();
 		})
-		$(window).bind("beforeunload", function(e) {
-			opener.parent.location.reload();
-		});
 	</script>
 </body>
 </html>

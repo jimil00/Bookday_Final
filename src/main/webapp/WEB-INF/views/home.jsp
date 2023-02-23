@@ -856,7 +856,7 @@ span, #logoImg:hover {
          if(${loginID == null}) {
               location.href = "/member/toLogin";
          }else {
-              location.href = "/delivery/selectBookbagListById?id=${loginID }";
+              location.href = "/delivery/selectBookbagListById";
          }
       })
       $("#bookshelves").on("click", function() {
@@ -872,7 +872,7 @@ span, #logoImg:hover {
             return false;
             
          }else {
-         location.href = "/member/toMypage?";
+         location.href = "/member/toMypage";
          }
       })
       // 구독하기 버튼 기능
@@ -880,7 +880,7 @@ span, #logoImg:hover {
           if(${loginID == null}) {
                  location.href = "/member/toLogin";
             }else {
-                 location.href = "/delivery/toPayment?id=${loginID }";
+                 location.href = "/delivery/toPayment";
             }
       })
       

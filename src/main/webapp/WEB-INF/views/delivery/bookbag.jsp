@@ -36,10 +36,9 @@
 }
 
 /* div {
-
    border: 1px solid black;
-
 } */
+
 .container {
 	margin: auto;
 	overflow: hidden;
@@ -156,7 +155,6 @@ span, #logoImg:hover {
 	margin-top: 15px;
 	margin-bottom: 15px;
 }
-
 /* header */
 
 /* login */
@@ -193,13 +191,6 @@ span, #logoImg:hover {
 
 .login_form {
 	margin-top: 200px;
-}
-
-/* navi */
-.navi {
-	/* 	width: 100%; */
-	/* 	height: 50px; */
-	
 }
 
 /* body */
@@ -260,8 +251,6 @@ span, #logoImg:hover {
 
 .bookbag-top {
 	height: 30px;
-	/* 	padding-top: 25px; */
-	/* 	padding-left: 15px; */
 	padding-right: 18px;
 }
 
@@ -277,7 +266,6 @@ span, #logoImg:hover {
 	width: 5%;
 	height: 100%;
 	line-height: 150px;
-	/* 	padding-left: 15px; */
 }
 
 .check {
@@ -384,7 +372,6 @@ span, #logoImg:hover {
 
 /* footer */
 .footer {
-	/* 	margin: 5px;  */
 	padding-top: 120px;
 }
 
@@ -472,8 +459,8 @@ span, #logoImg:hover {
 /* body */
 </style>
 </head>
-<body onload="noBack();" onpageshow="if(event.persisted) noBack();"
-	onunload="">
+<!-- 대여완료페이지에서 뒤로가기 막기 기능 -->
+<body onload="noBack();" onpageshow="if(event.persisted) noBack();" onunload="">
 	<div class="container">
 		<div class="header">
 			<div class="logo">
@@ -762,7 +749,7 @@ span, #logoImg:hover {
 				    
 					// 주소검색, 주소변경 버튼 기능
 					$(".address-btn").on("click", function() {
-						window.open("/delivery/toAddressInput?id=${loginID }", "_blank", "toolbar=no, menubar=no, scrollbars=yes, resizable=no, width=500, height=500, left=500, top=150");
+						window.open("/delivery/toAddressInput", "_blank", "toolbar=no, menubar=no, scrollbars=yes, resizable=no, width=500, height=500, left=500, top=150");
 					})
 					
 					// 대여하기 버튼 기능
@@ -886,12 +873,7 @@ span, #logoImg:hover {
 			location.href = "/bookshelves/selectBookshelvesListById";
 		})
 		 $("#mypage").on("click", function() {
-         if (${loginID == null}) {
-            location.href = "/member/toLogin";
-            return false;
-         }else {
-         location.href = "/member/toMypage";
-         }
+			 location.href = "/member/toMypage";
       })
       
        //footer: 사업자 정보 토글 기능

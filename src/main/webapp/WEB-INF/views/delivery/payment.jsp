@@ -27,10 +27,9 @@
 	font-family: 'NanumSquareNeo-Variable';
 }
 
-div {
-	/* 	border: 1px solid black; */
-	
-}
+/* div {
+	border: 1px solid black;
+} */
 
 .container {
 	margin: auto;
@@ -121,6 +120,7 @@ button:hover {
 	width: 20%;
 	height: 100%;
 }
+
 /* icon */
 .iconBox {
 	position: absolute;
@@ -201,8 +201,7 @@ span.size-40 {
 	font-size: 17px;
 }
 
-.
-main {
+.main {
 	height: 100%;
 	width: 100%;
 }
@@ -248,7 +247,6 @@ main {
 }
 
 .li-title {
-	/* 	padding-left: 20px; */
 	font-weight: bold;
 }
 
@@ -259,7 +257,6 @@ ul {
 li {
 	padding-bottom: 7px;
 }
-
 /* body */
 
 /* footer */
@@ -350,6 +347,7 @@ li {
 }
 </style>
 </head>
+
 <body>
 	<div class="container">
 		<div class="header">
@@ -457,7 +455,6 @@ li {
 					문의</span>
 			</div>
 			<p class="copyright">Copyright © 2022 책하루 All Rights Reserved.</p>
-			<!--  <p class="copyright">©BOOKDAY Corp.</p> -->
 		</div>
 	</div>
 	<script>
@@ -469,20 +466,19 @@ li {
 				pay_method : 'kakaopay',
 				merchant_uid : 'merchant_' + new Date().getTime(),
 				name : '책하루 [종이책 구독권]',
-				amount : 12000,
-				buyer_name : '구매자 이름',
-				buyer_email : '구매자 이메일',
-				buyer_tel : '구매자 전화번호'
+				amount : 12000
+				//buyer_name : '구매자 이름',
+				//buyer_email : '구매자 이메일',
+				//buyer_tel : '구매자 전화번호'
 			}, function(rsp) {
 				if (rsp.success) {
 					var msg = '결제가 완료되었습니다.';
-					window.open("/delivery/toPaymentCompleted?id=${loginID }", "_blank", "toolbar=no, menubar=no, scrollbars=yes, resizable=no, width=500, height=250, left=500, top=250");
-
+					window.open("/delivery/toPaymentCompleted", "_blank", "toolbar=no, menubar=no, scrollbars=yes, resizable=no, width=500, height=250, left=500, top=250");
 				} else {
 					var msg = '결제에 실패하였습니다.';
 					rsp.error_msg;
 				}
-			});
+			}); 
 		})
 
 		$("#disabled-pay-btn").on("click", function() {
@@ -514,13 +510,8 @@ li {
 			location.href = "/bookshelves/selectBookshelvesListById";
 		})
 		 $("#mypage").on("click", function() {
-         if (${loginID == null}) {
-            location.href = "/member/toLogin";
-            return false;
-         }else {
-         location.href = "/member/toMypage";
-         }
-      })
+        	location.href = "/member/toMypage";
+     	 })
       
        //footer: 사업자 정보 토글 기능
        $("#business_info_text").hide();

@@ -30,6 +30,7 @@
 /* div {
    border: 1px solid black;
 } */
+
 .container {
 	margin: auto;
 	overflow: hidden;
@@ -166,7 +167,6 @@ span.size-40 {
 span, #logoImg:hover {
 	cursor: pointer;
 }
-
 /* header */
 
 /* navi */
@@ -174,6 +174,7 @@ span, #logoImg:hover {
 	width: 100%;
 	height: 50px;
 }
+
 /* body */
 .body {
 	overflow: hidden;
@@ -206,7 +207,6 @@ span, #logoImg:hover {
 }
 
 .body-left {
-	/* overflow: auto; */
 	width: 47%;
 	float: left;
 }
@@ -253,7 +253,6 @@ span, #logoImg:hover {
 }
 
 .right-main {
-	/* 	height: 170px; */
 	padding-left: 10px;
 	padding-top: 5px;
 }
@@ -282,6 +281,7 @@ span, #logoImg:hover {
 	cursor: pointer;
 	box-shadow: 3px 3px #80808050;
 }
+
 /* footer */
 .footer {
 	margin: 5px;
@@ -411,8 +411,7 @@ span, #logoImg:hover {
 		<div class="navi"></div>
 		<div class="body">
 			<div class="body-top">
-				<div class="material-symbols-outlined" id="check-icon">
-					check_circle</div>
+				<div class="material-symbols-outlined" id="check-icon">check_circle</div>
 				<div class="check-text">대여가 완료되었습니다.</div>
 			</div>
 			<div class="body-left">
@@ -510,12 +509,7 @@ span, #logoImg:hover {
 			location.href = "/";
 		})
 		$("#mypage-btn").on("click", function() {
-			if (${loginID == null}) {
-	            location.href = "/member/toLogin";
-	            return false;
-	         }else {
 	         location.href = "/member/toMypage";
-	         }
 		})
 
 		$("#logoImg").on("click", function() {
@@ -544,12 +538,7 @@ span, #logoImg:hover {
 			location.href = "/bookshelves/selectBookshelvesListById";
 		})
 		 $("#mypage").on("click", function() {
-	         if (${loginID == null}) {
-	            location.href = "/member/toLogin";
-	            return false;
-	         }else {
 	         location.href = "/member/toMypage";
-	         }
       	})
       	
       	 //footer: 사업자 정보 토글 기능

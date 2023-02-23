@@ -29,7 +29,7 @@
 }
 
 div {
-	/* 	border: 1px solid black; */
+	/* border: 1px solid black; */
 	text-align: center;
 }
 
@@ -76,7 +76,7 @@ div {
 	<div class="container">
 		<div class="header">
 			<div class="logo-img">
-				<img src="/resources/bookday_logo_ver1(kor).png" id="logo-img">
+				<img src="/resources/bookday_logo_ver1(kor).png">
 			</div>
 		</div>
 		<div class="body">
@@ -146,11 +146,6 @@ div {
 				top : '150'
 			});
 		}
-
-		$("#logo-img").on("click", function() {
-			opener.location.href = "/";
-			window.close();
-		})
 
 		$("#save-btn").on(
 				"click",
