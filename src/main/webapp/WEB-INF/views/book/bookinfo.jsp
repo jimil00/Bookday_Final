@@ -370,7 +370,7 @@ span, #logoImg:hover {
    border-bottom: 1px solid #80808050;
 }
 
-.r_writer_info>p, .r_content {
+.r_writer_info>.rw_info>p, .r_content {
    display: inline-flex;
    margin: 10px;
    font-size: small;
@@ -378,7 +378,14 @@ span, #logoImg:hover {
 
 .r_writer_info {
    height: 50px;
+   display:inline-flex;
+   
 }
+
+/* .rw_info{
+display:inline-flex;
+}
+ */
 
 .r_contents {
    display: inline-flex;
@@ -414,10 +421,12 @@ span, #logoImg:hover {
    text-align: center;
 }
 
+
 .user_btn {
    display: inline;
    position: relative;
-   left: 70%;
+   top: 18%;
+   margin-left:10px;
 }
 
 .user_btn>button, .fin_btn, .cancel_btn {
@@ -857,6 +866,8 @@ span, #logoImg:hover {
 
                               <div class="r_title_box">
                                  <div class="r_writer_info">
+                                 
+                                 <div class="rw_info">
                                     <input type="hidden" value="${r.rv_seq}" class="rv_seq">
                                     <p class="nick">${r.rv_writer_nn}</p>
                                     <p class="r_line">|</p>
@@ -864,6 +875,7 @@ span, #logoImg:hover {
                                        <fmt:formatDate pattern="yyyy-MM-dd"
                                           value="${r.rv_write_date}" />
                                     </p>
+                                 </div>
 
                                     <c:if test="${loginID == r.rv_writer_id}">
                                        <div class="user_btn">

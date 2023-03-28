@@ -274,7 +274,7 @@ public class MemberController {
 	         System.out.println(sys);
 	         
 	      //파일 관련 업데이트 업로드 참고
-	      String realPath= session.getServletContext().getRealPath("/resources/profile");
+	      String realPath= session.getServletContext().getRealPath("/resources/profile/");
 	      
 	      File filePath= new File(realPath);
 	      

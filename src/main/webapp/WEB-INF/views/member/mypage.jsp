@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Home</title>
+<title>Mypage</title>
 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
@@ -276,9 +276,6 @@ span, #logoImg:hover {
 	background-color: #5397fc;
 	box-shadow: 3px 3px #80808050;
 }
-
-<<<<<<<
-HEAD
 
 .body-btn:hover {
 	margin-left: 5px;
@@ -592,7 +589,7 @@ HEAD
 	    
 	  	if(${dto.sysprofname == '0'}){
 	  		
-	  		$("#prof_img").attr("src","/resources/basic.png");
+	  		$("#prof_img").attr("src","/resources/profile/basic.png");
 							return;
 						}
 	   });
