@@ -589,7 +589,7 @@ span, #logoImg:hover {
 	    
 	  	if(${dto.sysprofname == '0'}){
 	  		
-	  		$("#prof_img").attr("src","/resources/profile/basic.png");
+	  		$("#prof_img").attr("src","/resources/basic.png");
 							return;
 						}
 	   });

@@ -747,7 +747,7 @@ span, #logoImg:hover {
 												<div class="post-main-top">
 													<div class="profile-img-div">
 														<img src="/resources/profile/${p.sysprofname}"
-															class="profile_img">
+															class="profile-img">
 													</div>
 													<div class="p-writer">${p.p_writer_nn }</div>
 													<div class="p-like">
@@ -766,13 +766,13 @@ span, #logoImg:hover {
 											</div>
 										</div>
 										<script>
-							$("#${p.p_seq }").on("click", function() {
-							  	  if(${empty loginID}) {
-							  		 alert("로그인 후 이동할 수 있습니다.");
-							  		 return false;
-							  	  }
-							  })
-							</script>
+											$("#${p.p_seq }").on("click", function() {
+											  	  if(${empty loginID}) {
+											  		 alert("로그인 후 이동할 수 있습니다.");
+											  		 return false;
+											  	  }
+											  })
+										</script>
 									</c:forEach>
 								</c:when>
 								<c:otherwise>

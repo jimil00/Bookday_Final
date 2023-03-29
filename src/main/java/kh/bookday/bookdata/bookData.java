@@ -24,7 +24,7 @@ public class bookData {
 
 		try {
 
-			URL firstURL = new URL("http://data4library.kr/api/loanItemSrch?authKey=c3961a3562330baad3bc05913f5ffc62a973821fd682747cb582763296f3f9c3&pageNo=1&age=20&startDt=2022-01-01&format=json&pageSize=10");
+			URL firstURL = new URL("http://data4library.kr/api/loanItemSrch?authKey=c3961a3562330baad3bc05913f5ffc62a973821fd682747cb582763296f3f9c3&pageNo=12&age=20&startDt=2022-01-01&format=json&pageSize=40");
 			BufferedReader bf1;
 			bf1 = new BufferedReader(new InputStreamReader(firstURL.openStream(), "UTF-8"));
 			firstParsing = bf1.readLine();
@@ -71,7 +71,7 @@ public class bookData {
 
 			for(int j=0; j<docs.size(); j++) {
 
-				URL secondURL = new URL("http://data4library.kr/api/srchDtlList?authKey=c3961a3562330baad3bc05913f5ffc62a973821fd682747cb582763296f3f9c3&isbn13="+isbn13.get(j)+"&format=json&pageSize=10");
+				URL secondURL = new URL("http://data4library.kr/api/srchDtlList?authKey=c3961a3562330baad3bc05913f5ffc62a973821fd682747cb582763296f3f9c3&isbn13="+isbn13.get(j)+"&format=json");
 				BufferedReader bf2;
 				bf2 = new BufferedReader(new InputStreamReader(secondURL.openStream(), "UTF-8"));
 				secondParsing = bf2.readLine();
