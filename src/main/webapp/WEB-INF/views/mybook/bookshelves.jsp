@@ -564,8 +564,8 @@ span.size-27 {
 						<div class="rentalBooks">
 							<c:forEach var="rental" items="${rlist}">
 								<div class="rentalBook">
-									<img src="${rental.b_img_url }" class="book"
-										isbn="${rental.b_isbn }">
+									<a href="/book/selectBookinfo?b_isbn=${rental.b_isbn }"><img src="${rental.b_img_url }" class="book"
+										isbn="${rental.b_isbn }"></a>
 								</div>
 							</c:forEach>
 						</div>
@@ -589,8 +589,8 @@ span.size-27 {
 											<c:forEach var="wishlist" items="${wlist }"
 												varStatus="wstatus">
 												<div class="wishlistBook" id="${wstatus.count }">
-													<img src="${wishlist.b_img_url }" class="book"
-														isbn="${wishlist.b_isbn }">
+													<a href="/book/selectBookinfo?b_isbn=${wishlist.b_isbn }"><img src="${wishlist.b_img_url }" class="book"
+														isbn="${wishlist.b_isbn }"></a>
 												</div>
 												<c:if test="${wstatus.count%10==0 }">
 										</div>
@@ -641,8 +641,8 @@ span.size-27 {
 										<div class="postedBooks">
 									</c:if>
 									<div class="postedBook" id="${status.count }">
-										<img src="${post.b_img_url }" class="book"
-											isbn="${post.b_isbn }">
+										<a href="/book/selectBookinfo?b_isbn=${post.b_isbn }"><img src="${post.b_img_url }" class="book"
+											isbn="${post.b_isbn }"></a>
 									</div>
 									<c:if
 										test="${status.count%10==0 || status.count == fn:length(plist)}">

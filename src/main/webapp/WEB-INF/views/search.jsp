@@ -295,7 +295,7 @@ span, #logoImg:hover {
 
 .profile-img {
 	width: 55px;
-	height: auto;
+	height: 55px;
 	border-radius: 50%;
 }
 
@@ -355,7 +355,7 @@ span, #logoImg:hover {
 	padding-right: 10px;
 	display: -webkit-box;
 	width: 100%;
-	height: 152px;
+	height: 149px;
 	-webkit-line-clamp: 7;
 	-webkit-box-orient: vertical;
 	/* 	word-wrap: break-word; */

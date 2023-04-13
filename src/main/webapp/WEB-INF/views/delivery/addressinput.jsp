@@ -42,7 +42,7 @@ div {
 }
 
 #logo-img {
-	width: 130px;
+	width: 150px;
 	height: auto;
 }
 
@@ -76,7 +76,7 @@ div {
 	<div class="container">
 		<div class="header">
 			<div class="logo-img">
-				<img src="/resources/bookday_logo_ver1(kor).png">
+				<img src="/resources/bookday_logo_ver1(kor).png" id="logo-img">
 			</div>
 		</div>
 		<div class="body">

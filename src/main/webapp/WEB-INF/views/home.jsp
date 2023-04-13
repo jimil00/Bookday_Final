@@ -388,7 +388,7 @@ span, #logoImg:hover {
 
 .profile-img {
 	width: 55px;
-	height: auto;
+	height: 55px;
 	border-radius: 50%;
 }
 
@@ -448,7 +448,7 @@ span, #logoImg:hover {
 	padding-right: 10px;
 	display: -webkit-box;
 	width: 100%;
-	height: 152px;
+	height: 149px;
 	-webkit-line-clamp: 9;
 	-webkit-box-orient: vertical;
 	/* 	word-wrap: break-word; */
@@ -759,7 +759,7 @@ span, #logoImg:hover {
 												<hr id="p_line">
 												<div class="p-title" title="${p.p_title }">${p.p_title }</div>
 												<div class="p-content">
-													<a href="/"
+													<a href="/booknote/selectPostByPseq?p_seq=${p.p_seq }"
 														style="text-decoration-line: none; color: black;"
 														id="${p.p_seq }">${p.p_content }</a>
 												</div>

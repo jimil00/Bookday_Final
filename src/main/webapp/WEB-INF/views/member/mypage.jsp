@@ -508,9 +508,19 @@ span, #logoImg:hover {
 					</div>
 					<hr style="border-top: 1px rgb(216, 216, 216);">
 					<c:choose>
+					<c:when test="${rdto.formedRt_return_date eq null}">
+							<div class="rental info">
+								<div class="body-title">대여내역</div>
+								<hr class="body-hr">
+								<div
+									style="text-align: center; height: 150px; line-height: 150px">현재
+									대여 중인 책이 없습니다.</div>
+							</div>
+							<hr style="border-top: 1px rgb(216, 216, 216);">
+						</c:when>
 						<c:when test="${rdto.formedRt_return_date < today}">
 							<div class="rental info">
-								<div class="body-title">대여정보</div>
+								<div class="body-title">대여내역</div>
 								<hr class="body-hr">
 								<div
 									style="text-align: center; height: 150px; line-height: 150px">현재

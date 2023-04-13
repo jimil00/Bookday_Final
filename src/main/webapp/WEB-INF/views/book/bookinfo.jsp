@@ -513,7 +513,7 @@ display:inline-flex;
 
 .profile_img {
    width: 55px;
-   height: auto;
+   height: 55px;
    border-radius: 50%;
 }
 
@@ -574,7 +574,8 @@ display:inline-flex;
    padding-left: 10px;
    padding-right: 10px;
    display: -webkit-box;
-   height: 145px;
+   	width: 100%;
+   height: 149px;
    line-height: 17px;
    -webkit-line-clamp: 7;
    -webkit-box-orient: vertical;
@@ -1147,14 +1148,14 @@ let swiper2 = new Swiper(".swiper-with", {
    });
    
 //프로필 사진 없을 때
-$( document ).ready( function() {
+// $( document ).ready( function() {
     
-     if(${p.sysprofname != ""}){
+//      if(${p.sysprofname != ""}){
         
-      $(".profile_img").attr("src","/resources/basic.png");
-                  return;
-               }
-   });
+//       $(".profile_img").attr("src","/resources/basic.png");
+//                   return;
+//                }
+//    });
 
 
 $(document).ready(function(){
